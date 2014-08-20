@@ -305,7 +305,7 @@ class MailerSubscriptionApiV2_0
         $mobileStatus = CONTACT_SUBSCRIPTION_STATUS_UNSUBSCRIBED)
     {
         $success = $this->_xml_rpc->query(
-            'list._subscriptions.CreateListSubscription',
+            'list._subscriptions.ListSubscription',
             $listId,
             array(
                 'list_id' => $listId,
