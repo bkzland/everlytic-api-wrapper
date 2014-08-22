@@ -265,11 +265,12 @@ class MailerSubscriptionApiV2_0
      *
      * @return array
      */
-    public function listSubscriptions($listId, array $filter = array(),
-        $page = 1, $count = 50, array $order = array(), $direction = 'ASC' )
+    public function listSubscriptions($listId,
+        $page = 1, $count = 50, $order = 'id', $direction = 'ASC',
+        array $filter = array() )
     {
         $success = $this->_xml_rpc->query(
-            'list._subscriptions.ListSubscriptions',
+            'list._subscriptions.ShowListSubscriptions',
             $listId,
             $page,
             $count,
